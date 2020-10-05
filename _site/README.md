@@ -28,6 +28,8 @@ Pelajaran yang akan disampaikan adalah mengenai desain objek secara 3 dimensi da
 ### Cara meng install program DesignSpark Mechanical
 
 1. Unduh Aplikasi di [Web resmi DesignSpark](https://www.rs-online.com/designspark/mechanical-download-and-installation).
-2. File yang diunduh bernama 'DSM_v5_buildxxxx.zip' dan Unzip file tersebut.
+2. File yang diunduh bernama 'DSM_v5_buildxxx.zip' dan Unzip file tersebut.
+![DSM_v5_buildxxx.zip](assets\images\readme\2020-10-05 16_32_50-DSM_v5_build7232_stable.png)
 3. 'Run as administrator' pada file 'Install_Wizard_DSM5.exe' didalam folder 'DSM_v5_buildxxxx_stable'
+![Install_Wizard_DSM5.exe](assets\images\readme\2020-10-05 16_36_07-DesignSpark Mechanical 5.0 - Installation Wizard.png)
 4. Windows instalation wizard akan muncul menampilkan 2 langkah install. Lakukan bergantian dimulai dari yang pertama lalu kedua. Setelah setiap langkah selesai tekan exit.
