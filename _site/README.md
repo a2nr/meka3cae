@@ -2,18 +2,18 @@
 
 Matapelajaran CAE akan berlangsung selama 12 pertemuan setiap hari selasa secara daring menggunakan perangkat video call dengan durasi kurang lebih 45-60 menit. Berikut daftar materi yang akan diajarkan selama pelajaran.
 
-1. Modeling 1 - Tool Sketch, Select dan Pull
-2. Modeling 2 - Move tool
-3. Modeling 3 - Fill tool
-4. Modeling 4 - Combine tool
-5. Frimware 1 -
-6. Frimware 2 -
-7. Frimware 3 - 
-8. GUI 1 -
-9. GUI 2 - 
-10. GUI 3 -
-11. TUGAS
-12. UAS 
+- Modeling 1 - Tool Sketch, Select dan Pull
+- Modeling 2 - Tool Sketch, Select dan Pull
+- Modeling 3 - Move tool
+- Modeling 4 - Fill tool
+- Modeling 5 - Combine tool
+- Frimware 1 -
+- Frimware 2 -
+- Frimware 3 - 
+- GUI 1 -
+- GUI 2 - 
+- TUGAS
+- UAS 
 
 ## Deskripsi
 
