@@ -1,0 +1,818 @@
+<!DOCTYPE html><html lang="en">
+      
+      
+        
+    
+    
+    
+    
+
+      
+      
+      <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">  
+        
+        <title>Using the Control System | Projects | Design and Manufacturing I | Mechanical Engineering | MIT OpenCourseWare</title>
+    <!-- Begin Automatic Metadata Insertion -->
+    <meta content="2-007-design-and-manufacturing-i-spring-2009" name="WT.cg_n">
+    <meta content="Using the Control System" name="WT.cg_s">
+    <meta content="Instructions on using the control system for a robotics design contest." name="Description">
+    <meta content="Frey, Daniel" name="Author">
+    <meta content="Gossard, David" name="Author">
+    <meta content="2.007,engineering design,synthesis,analysis,robustness,manufacturability,active learning,idea generation,estimation,materials selection,visual thinking,kinematics,machine elements,robotics,mechanical engineering,student work,contest,Mechanical Design,Robotics and Control Systems" name="keywords">
+    <meta content="2.007 Design and Manufacturing I | Using the Control System" name="Search_Display">
+    <meta content="Mechanical Design" itemprop="about">
+    <meta content="Robotics and Control Systems" itemprop="about">
+    <!-- End Automatic Metadata Insertion -->
+
+	<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/search.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../../common/styles/courses_new.css">
+	<link href="../../../common/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+	<link rel="canonical" href="https://ocw.mit.edu/courses/mechanical-engineering/2-007-design-and-manufacturing-i-spring-2009/projects/using_the_control_system/">
+	<link rel="apple-touch-icon" href="../../../common/images/apple-touch-icon.png">
+	
+	
+      
+	
+	<script type="text/javascript" src="../../../common/scripts/jquery.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/ocw-media-utils-offline.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/ocw-offline.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/jquery.bubblepopup.min.js"></script>
+	<script type="text/javascript" src="../../../common/scripts/expandy.js"></script>
+	<script type="text/javascript" src="https://ocw.mit.edu//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=70ac07d7-b28f-4071-816f-d292aba4849f"></script>
+	<script type="text/javascript" src="../../../common/scripts/bubble-popup-offline.js"></script>
+	
+	
+	
+    
+    
+    
+    
+    
+    
+    
+      
+       
+		 
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </head>
+    <body itemscope itemtype="http://schema.org/WebPage">
+        
+	
+
+        <header id="top">
+			<div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index-->
+<div class="grid_6 alpha" id="banner"><a href="https://ocw.mit.edu/"><img src="../../../common/images/ocw_mast.png" class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology"></a></div>
+<div class="grid_6 omega" id="subscribe">
+<aside class="module" aria-label="Connect with OCW">
+<table class="social">
+    <tbody>
+        <tr>
+            <td class="socialbutton"><a aria-label="Subscribe to the OCW Newsletter" href="https://ocw.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>
+            <td>
+<a aria-label="Facebook" href="https://facebook.com/mitocw"><img src="../../../common/images/icon_fb.png" alt="Click to visit our Facebook page."></a>  <a aria-label="Instagram" href="https://www.instagram.com/mitocw/"><img src="https://ocw.mit.edu/images/icon_ig.png" alt="Click to visit our Instagram page."></a> <a aria-label="Twitter" href="https://twitter.com/mitocw"><img src="https://ocw.mit.edu/images/icon_twitter.png" alt="Click to visit our Twitter feed."></a><a aria-label="YouTube" href="https://www.youtube.com/mitocw" style="font-size: 12.208px;"><img src="https://ocw.mit.edu/images/icon_yt.png" alt="Click to visit our YouTube page."></a><span style="font-size: 12.208px;">   </span><a aria-label="Open Matters blog on WordPress" href="https://www.ocw-openmatters.org/" style="font-size: 12.208px;"><img src="https://ocw.mit.edu/images/icon_wp.png" alt="Click to visit our blog on WordPress."></a>
+</td>
+        </tr>
+    </tbody>
+</table>
+</aside><nav aria-label="Help Links" class="helplinks">     <a aria-label="OCW Site Help" href="https://ocw.mit.edu/help">Help</a><span aria-hidden="true">|</span>     <a href="../../../common/about/contactus.htm">Contact Us</a>   </nav>
+</div>
+<div class="clear"> </div>
+<!--googleon: index-->
+</div>
+
+</div>
+
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75">
+<div class="portletStaticText portlet-static-mega-menu"><div><nav id="mega" class="grid_8 alpha" aria-label="Site">
+<ul id="menu" role="presentation">
+    <li id="menu_home">
+<a href="https://ocw.mit.edu/" aria-label="Homepage"><img src="../../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+</li>
+    <!-- End Home Item -->
+    <li id="drop_1" aria-label="Find Courses">
+<a href="#" aria-hidden="true">FIND COURSES</a><!-- Begin 5 columns Item -->
+    <div class="dropdown_5columns-a mega-courses">
+    <div class="col_1a">
+    <div class="row_1a">
+<nav aria-labelledby="mm-find-courses-by">     <span id="mm-find-courses-by" class="nav" aria-hidden="true">Find courses by:</span>
+    <ul class="find_by" role="presentation">
+        <li><a href="https://ocw.mit.edu/courses/find-by-topic/">Topic</a></li>
+        <li><a href="https://ocw.mit.edu/courses/find-by-number/">MIT Course Number</a></li>
+        <li><a href="https://ocw.mit.edu/courses/find-by-department/">Department</a></li>
+    </ul>
+    </nav>     <nav aria-labelledby="mm-collections">     <span id="mm-collections" class="nav" aria-hidden="true">Collections</span>
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/courses/new-courses/">New Courses</a></li>
+        <li><a href="https://ocw.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+        <li><a href="https://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+        <li><a href="https://ocw.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>
+        <li><a href="https://ocw.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+        <li><a href="https://ocw.mit.edu/resources/">Supplemental Resources</a></li>
+        <li><a href="https://ocw.mit.edu/high-school/">OCW Highlights for High School</a></li>
+        <li><a href="https://ocw.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>
+        <li><a href="https://ocw.mit.edu/courses/mit-open-learning-library/">MIT Open Learning Library</a></li>
+    </ul>
+    </nav>     <nav class="col_1b" aria-labelledby="mm-translated-courses">     <span id="mm-translated-courses" class="nav" aria-hidden="true" style="line-height: 1.3;">Cross-Disciplinary Topic Lists</span>
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/courses/energy-courses">Energy</a></li>
+        <li><a href="https://ocw.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>
+        <li><a href="https://ocw.mit.edu/courses/environment-courses">Environment</a></li>
+        <li><a href="https://ocw.mit.edu/courses/intro-programming">Introductory Programming</a></li>
+        <li><a href="https://ocw.mit.edu/courses/life-sciences">Life Sciences</a></li>
+        <li><a href="https://ocw.mit.edu/courses/transportation-courses">Transportation</a></li>
+    </ul>
+    </nav>
+</div>
+    <div class="row_1b"><nav aria-labelledby="mm-cross-disciplinary-topic-lists">     <span id="mm-cross-disciplinary-topic-lists" class="nav" aria-hidden="true">Translated Courses</span>
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/courses/translated-courses/traditional-chinese" aria-label="Traditional Chinese">繁體字 / Traditional Chinese</a></li>
+        <li><a href="https://ocw.mit.edu/courses/translated-courses/turkish" aria-label="Turkish">Türkçe / Turkish</a></li>
+        <li><a href="https://ocw.mit.edu/courses/translated-courses/korean" aria-label="Korean">(비디오)한국 / Korean</a></li>
+    </ul>
+    </nav></div>
+    </div>
+    </div>
+    </li>
+    <li id="drop_2">
+<a href="#" aria-label="For Educators">For Educators</a>
+    <div class="dropdown_1column-a" style="width: 270px;"><nav aria-labelledby="mm-find-courses-by">
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/educator/chalk-radio-podcast">Chalk Radio Podcast</a></li>
+        <li><a href="https://ocw.mit.edu/educator/">OCW Educator Portal</a></li>
+    </ul>
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>
+        <li><a href="https://openlearning.mit.edu/campus/digital-innovations/">Residential Digital Innovations </a></li>
+    </ul>
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/high-school/">OCW Highlights for High School</a></li>
+    </ul>
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/educator/additional-resources/">Additional Resources</a></li>
+    </ul>
+    </nav></div>
+    </li>
+    <li id="drop_3">
+<a href="#" aria-hidden="true">Give Now</a>
+    <div class="dropdown_1column-a"><nav class="col_1" aria-label="Donate">
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/give/">Make a Donation</a></li>
+        <li><a href="https://ocw.mit.edu/give/why-give/">Why Give?</a></li>
+        <li><a href="https://ocw.mit.edu/give/our-supporters/">Our Supporters</a></li>
+        <li><a href="https://ocw.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+        <li><a href="https://ocw.mit.edu/support/">Become a Corporate Sponsor</a></li>
+    </ul>
+    </nav></div>
+    </li>
+    <li id="drop_4">
+<a href="#" aria-hidden="true">About</a>
+    <div class="dropdown_1column-a"><nav class="col_1" aria-label="About">
+    <ul role="presentation">
+        <li><a href="https://ocw.mit.edu/about/">About MIT OpenCourseWare</a></li>
+        <li><a href="https://ocw.mit.edu/about/site-statistics/">Site Statistics</a></li>
+        <li><a href="https://ocw.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+        <li><a href="https://ocw.mit.edu/about/newsletter/">Newsletter</a></li>
+        <li><a href="https://chalk-radio.simplecast.com/">Chalk Radio Podcast</a></li>
+        <li><a href="https://www.ocw-openmatters.org/">Open Matters Blog</a></li>
+    </ul>
+    </nav></div>
+    </li>
+</ul>
+</nav></div></div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+<script>
+  (function() {
+	var cx = '012626166551961672889:owjdpuboktq';
+	var gcse = document.createElement('script');
+	gcse.type = 'text/javascript';
+	gcse.async = true;
+	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(gcse, s);
+  })();
+  window.onload = function(){
+	document.getElementById('gsc-i-id1').placeholder = 'Search';	
+  };
+
+$(document).ready(function(){
+
+$('.advanceSearch a').keydown(function(event){showSearchTips($(this),event);})
+$('#searchTipsModal').keydown(function(event){showSearchTips($(this),event);})
+
+function showSearchTips(obj,evt) {
+// if pressed enter key
+	if ( evt.which == 13 || evt.which == 32) {
+		showModal();
+		ga('send', 'pageview', "AdvanceSearch");
+		$(".advanceSearch a").attr('aria-expanded', 'true');
+		$('.searchTipsModal').focus();
+		evt.preventDefault();
+		}
+	if ( evt.which == 27 ) {
+		hideModal();
+		$(".advanceSearch a").attr('aria-expanded', 'false');
+		var modal = document.getElementById('searchTipsModal');
+		modal.style.display = "none";
+		$(".advanceSearch a").focus();
+		evt.preventDefault();
+		}
+}
+
+});
+function showModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "block";
+	ga('send', 'pageview', "AdvanceSearch");
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", true);
+	window.setTimeout(function () {
+    document.getElementById('searchTipsModal').focus(); }, 0);
+}
+
+function hideModal(){
+	var modal = document.getElementById('searchTipsModal');
+	modal.style.display = "none";
+	document.getElementById("searchTipsBtn").setAttribute("aria-expanded", false);
+}
+</script>
+<div id="search" role="search" class="grid_4 omega">
+    	<table class="search">
+				<tbody>
+					<tr>
+						<td><div class="searchboxheader"><searchbox-only resultsurl="/search/ocwsearch.htm"></searchbox-only></div></td>
+						<td>
+							<div class="advanceSearch">
+								<a id="searchTipsBtn" onclick="showModal();" href="#" role="button" aria-label="search tips" aria-expanded="false" aria-describedby="searchtips">Search Tips</a>
+
+								<!-- The Modal -->
+								<div id="searchTipsModal" class="modal" tabindex="-1">
+								  <!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-body">
+											<button class="close" onclick="hideModal();" aria-label="close">X</button>
+											<span>
+												<b>Exclude words from your search</b>
+												<br>Put - in front of a word you want to leave out. For example, jaguar speed -car
+												<br><br>
+												<b>Search for an exact match</b>
+												<br>Put a word or phrase inside quotes. For example, "tallest building".
+												<br><br>
+												<b>Search for wildcards or unknown words</b>
+												<br>Put a * in your word or phrase where you want to leave a placeholder. For example, "largest * in the world".
+												<br><br>
+												<b>Search within a range of numbers</b>
+												<br>Put .. between two numbers. For example, camera $50..$100.
+												<br><br>
+												<b>Combine searches</b>
+												<br>Put "OR" between each search query. For example,  marathon OR race.
+												<br><br>
+											</span>
+										</div>
+								  </div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+		</table>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</header><!-- top end -->
+			
+		<div id="center">
+         <div id="grid">
+		         <div id="left-section">
+                 <nav aria-label="Breadcrumb" id="breadcrumb">
+                      <p>
+
+    <a href="https://ocw.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="https://ocw.mit.edu/courses">Courses</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="https://ocw.mit.edu/courses/mechanical-engineering">Mechanical Engineering</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/index.htm">Design and Manufacturing I</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../../contents/projects/index.htm">Projects</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Using the Control System
+         
+    
+</p>
+
+                 </nav>
+                 <div class="clear"></div>
+                   <div id="section_title">
+           			     <h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Using the Control System
+        </span>
+    </h1>
+             	     </div>
+             	     <div class="clear"></div>
+             	     <div id="course_wrapper_section">
+           	     	 <nav id="course_nav" aria-label="Course">
+               			 
+
+
+
+<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script>
+<!--Left Nav Starts -->
+
+
+	<ul>			  
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/index.htm">
+		                  Course Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/syllabus/index.htm">
+		                  Syllabus  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/calendar/index.htm">
+		                  Calendar  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/lecture-notes/index.htm">
+		                  Lecture Notes  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/recitations/index.htm">
+		                  Recitations  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/assignments/index.htm">
+		                  Assignments  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/exams/index.htm">
+		                  Exams  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="selected">
+			   			<a href="../../../contents/projects/index.htm">
+		                  Projects  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../../contents/related-resources/index.htm">
+		                  Related Resources  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+
+
+<!--Left Nav Ends -->
+
+
+
+
+
+
+
+
+
+           		     </nav>
+           		     <main id="course_inner_section" aria-labelledby="section_title">
+           		     	
+	       		     	<p>All images courtesy of Alex Slocum.</p>
+<p><a href="#How_to_Wire_Your_Machine">How to Wire Your Machine</a></p>
+<p><a href="#About_the_Batteries">About the Batteries</a></p>
+<p><a href="#About_the_Control_Box">About the Control Box</a></p>
+<p><a href="#How_to_Mount_the_Control_Box">How to Mount the Control Box</a></p>
+<p><a href="#How_to_Run_the_Control_system">How to Run the Control system</a></p>
+<p><a href="#How_the_Contest_Will_run">How the Contest Will run</a></p>
+<h2 class="subhead">
+<a name="How_to_Wire_Your_Machine" id="How_to_Wire_Your_Machine"></a>How to Wire Your Machine</h2>
+<p class="subhead"><img border="0" src="../../../contents/projects/motor_plug.jpg" alt="Motor plug."></p>
+<p class="instruction">Motor plug.</p>
+<p><br><br> </p>
+<p class="subhead"><img border="0" src="../../../contents/projects/battery_plug.jpg" alt="Battery plug."></p>
+<p class="instruction">Battery plug.</p>
+<p>The above figures indicate how to wire both the Amp 14 pin connector (to connect to your motors) and the 4 pin connector (to connect to your batteries). Please obtain the pins and lead wire (<a href="../../../contents/projects/MIT2_007s09_kp_cir14pinamp.pdf">PDF</a>) from the cabinet. We recommend that you print out the debug sheet (<img alt="This resource may not render correctly in a screen reader." src="../../../common/images/inacessible.gif"><a href="../../../contents/projects/MIT2_007s09_controlsystdebug.pdf">PDF</a>) and bring it to lab. Pay particular attention to how the batteries are wired! This wiring layout is not done arbitrarily - if the battery plug is wired incorrectly, either the control box will not turn on, or worse, the batteries will short within the plug, which will damage the control box and possibly cause your batteries to explode!</p>
+<p>Long motor and battery wires have the following two problems. Try to keep them short for your own benefit.</p>
+<ol>
+<li>Longer wires increase the resistance, and therefore reduce the power going to the motors.</li>
+<li>Longer wires and improperly soldered wires can cause spurious signals on the radio link. These spurious signals will cause your machine to jitter or jerk around when you are not touching the control box.</li>
+</ol>
+<p><strong>You may not wire two motors in parallel to one channel!</strong></p>
+<p><strong>Incorrectly wiring either plug will result in damage to your machine, batteries, and control box!</strong></p>
+<p><img border="0" src="../../../contents/projects/proper_connector.jpg" alt="Proper pin direction."></p>
+<p class="instruction">Proper pin direction.</p>
+<p><br><br> </p>
+<p><img border="0" src="../../../contents/projects/pin_tool.jpg" alt="AMP pin removal tool."></p>
+<p class="instruction">AMP pin removal tool.</p>
+<p>When wiring the connectors, check to make sure that the pins are pointing in the proper direction, which is shown above. You can use the AMP pin removal tool to remove pins and insert them properly.</p>
+<p><img border="0" src="../../../contents/projects/insulatd_mot_con.jpg" alt="Carefully insulated wires."></p>
+<p class="instruction">Carefully insulated wires.</p>
+<p>All wiring must be insulated. This includes wire splices, soldered connections to the battery cradles, and connections to actuators. This is most easily done with electrical tape, though most securely done with heat shrink tubing. Poorly insulated connections are a confirmed source of controller problems.</p>
+<p>All wiring should be strain relieved. Strain relief can be created by looping wire then securing it in place using electrical tape, zip ties, cable mounts, velcro, etc.</p>
+<p><strong>The staff will not assist with machine debugging until all connections are properly insulated.</strong></p>
+<p><strong>Machines without properly insulated connections are barred from competition!</strong></p>
+<p>Machines that are barred from competition cannot compete in the contest, which means you cannot receive any points for the contest. This is very bad!</p>
+<h2 class="subhead">
+<a name="About_the_Batteries" id="About_the_Batteries"></a>About the Batteries</h2>
+<p>For the contest, you will be using the batteries supplied with your handheld drill. The drill you are receiving is a 14.4V cordless drill. The batteries are fairly hefty NiMH batteries. The nominal voltage of the battery is 14.4 Volts, although the battery can supply between 12 and 17 Volts, depending on the charge. Do not run your battery below 12V, as it will begin to damage the battery. The control box will signal when you have dropped below 12V and will shut off at 11V.</p>
+<p><img border="0" src="../../../contents/projects/2004_battery.jpg" alt="Connecting battery to control box."></p>
+<p class="instruction">Connecting battery to control box.</p>
+<p><strong>Note</strong>: Your battery may look different. Check the polarity of your leads before connecting the battery to the control box.</p>
+<p>To connect your battery to the control box, you need to create a power cable using two of the pin and lead wires in the cabinet. Put two wires into the AMP 4-pin power connector in the appropriate numbered holes. Attach 1/4" spade connectors to the other end of the wire. These connectors are available in the cabinet or at your local hardware store. The screw-on style battery spade plugs are not the best solution. The best option is to use crimped plugs and flow in some solder between the plug and wires. If the wires attached to the connector are not long enough for your design, you can solder additional wire onto these leads. Check with a UA or the shop staff for help soldering. Remember that these solder joints must be insulated!</p>
+<p>Please pay careful attention to the order of the wires when connecting the power cables to avoid plugging things in backwards. You should label your wires positive and negative. Or a better solution is to design a custom connector that will only fit onto the battery one way. You can also create a nice battery holder using the 3" box extrusion by milling out a slot on the wide face so that the battery can slide along the length. Fix the spade connectors at the end of the extrusion. Add some velcro or a locking feature and you have a nice secure battery holder!</p>
+<h3 class="subsubhead">Charging the Batteries</h3>
+<p>It is your responsibility to keep your batteries properly charged during the semester and during the contest. Please read the instructions on how to charge your battery, which were included in the drill kit. Several charge/discharge cycles are required before you can charge your battery to its maximum capacity.</p>
+<p>The batteries will slowly loose charge when they are not connected to the charger. Read the instructions included with the charger to determine when there may be problems with your battery or charger. Do not let the battery get hot during charging. If it does it will get damaged.</p>
+<h2 class="subhead">
+<a name="About_the_Control_Box" id="About_the_Control_Box"></a>About the Control Box</h2>
+<p><strong>Recommended</strong>: Download the Solidworks 2003 solid model of the control box: Control_Box.zip (<a href="../../../contents/projects/control_box_cad.zip">ZIP</a>) (The ZIP file contains: 8 .sldprt files, 1 .sldasm file, and 1 .swj file.)</p>
+<p>While we have striven to make all the physical boxes identical to each other and the solid model. Some variation is inevitable, however, and it is the student's responsibility to account for it. Approximate weight of the control box is 0.85 lbs. (0.39 kg.). Dimensions of the box can be obtained from the solid model.</p>
+<p><img src="../../../contents/projects/controlbox_front.jpg" alt="Box front."></p>
+<p class="instruction">Box front.</p>
+<h3 class="subsubhead">Features on the Box Front</h3>
+<ul>
+<li>
+<strong>Motor on/off Button</strong> - Activates and de-activates the unit. Will glow red when the the batteries are connected and the switch is on. This button will mostly be used during the contest. While the control box is mounted to your machine, the Power switch must be easily accessible by a staff member.</li>
+<li>
+<strong>Demo/Calibration Mode Toggle</strong> - This switch will put the box into a demo mode or a calibration mode. The button will glow green when it is activated. When it is activated, the system will not respond to commands from the podium. DO NOT USE THIS BUTTON!! If you notice the podium controls are not zeroed properly (motion when the controls are not touched), contact a 2.007 staff member to have the box recalibrated.</li>
+<li>
+<strong>External Control Plug</strong> - The control box can be programmed to listen to instructions over its serial input (phone jack) for commands to forward on to the speed controllers. Only autonomous machines will require the serial input! No one currently has autonomous machines, so this feature is not activated.</li>
+<li>
+<strong>AMP 14-pin Motor Connector</strong> - Generously donated by Tyco Electronics, this is where your motors are plugged into the control box. It must be easily accessible when the control box is mounted on your machine. The connector is the most vulnerable part of the control box. It must be protected against impact. See the wiring diagrams to correctly wire up your mating plug.</li>
+<li>
+<strong>AMP 4-Pin Battery Connector</strong> - Generously donated by Tyco Electronics, this is where your batteries are plugged into the control box. It must be easily accessible when the control box is mounted on your machine. The connector is the most vulnerable part of the control box. It must be protected against impact. See the wiring diagrams to correctly wire up your mating plug.</li>
+<li>
+<strong>Steel Mounting Plates</strong> - Mounted to the sides of the control box are thin strips of steel sheet metal. It is recommended that you use one or both of your magnets to mount the control box to your machine via these steel plates. You are responsible for designing the mounting mechanism to be robust enough to keep the control box attached to your machine throughout the contest. Magnets alone will not secure the control box in the presence of large inertial forces e.g. the impact forces associated with a fall.</li>
+</ul>
+<p><img src="../../../contents/projects/control_box_back.jpg" alt="Box back."></p>
+<p class="instruction">Box back.</p>
+<p><br><br> </p>
+<p><img src="../../../contents/projects/controlboxstatus.jpg" alt="Status indicator."></p>
+<p class="instruction">Status indicator.</p>
+<p><br><br> </p>
+<p><img src="../../../contents/projects/controlboxmotors.jpg" alt="Motor status indicators."></p>
+<p class="instruction">Motor status indicators.</p>
+<h3 class="subsubhead">Features on the Box Back</h3>
+<ul>
+<li>
+<strong>Status Indicators</strong> - The lights in the status indicators group describe operation of the control box: <ul>
+<li>
+<strong>Low Battery</strong> - The Low Battery LED turns on when battery voltage dips below 12V. Motor output is turned automatically off when battery voltage dips below 11V to protect the batteries.</li>
+<li>
+<strong>Calibration Mode</strong> - Occasionally (maybe once a year), the control system will go out of calibration. When the system is out of calibration, the control box will send power out to the motors when the joysticks are at zero. When this happens, see a UA or a staff member to get the control box recalibrated. When the system is being calibrated, the Calibration light will be steady.</li>
+<li>
+<strong>External Control</strong> - This LED indicator will turn on when an external programmable controller sends signals to the control box instead of the podiums. This feature is not currently used in 2.007, so this LED will not be lit.</li>
+<li>
+<strong>Thermal Warning</strong> - The Thermal Warning LED will turn on when the internal temperature of the motor drivers reach 140°C. This high temperature usually requires stalling the motors for &gt;35s. Beware of damage to your motor! The motor drivers will be automatically shutoff at 170°C. To assist in cooling the control box, a CPU fan will run. This fan requires that the cooling vents on the sides of the box be unobstructed. <strong>Your machine will not be allowed to compete if these vents are blocked!</strong>
+</li>
+</ul>
+</li>
+<li>
+<strong>Power LED</strong> - This LED will be lit when power is supplied to the box using batteries or using the podium power supply.</li>
+<li>
+<strong>Motor Status Indicators</strong> - These 12 indicators will show the status of each motor associated to the controller's four channels (eg. the Red channel on the podium corresponds to the first column on the control box). <ul>
+<li><strong>Green Light = Forward on Channel</strong></li>
+<li><strong>Red Light = Stop on Channel</strong></li>
+<li><strong>Blue Light = Reverse on Channel</strong></li>
+</ul>
+</li>
+</ul>
+<p>If the lights are blinking in a pretty fashion, the control box is in Demo Mode. To shut off demo mode, push the green button on the front side of the box.</p>
+<h2 class="subhead">
+<a name="How_to_Mount_the_Control_Box" id="How_to_Mount_the_Control_Box"></a>How to Mount the Control Box</h2>
+<h3 class="subsubhead">Checklist</h3>
+<ol>
+<li>The red and green buttons must be easily accessible by a staff member.</li>
+<li>The status LEDs should be visible for debugging (optional but recommended).</li>
+<li>AMP connectors must be easily accessible by a staff member.</li>
+<li>Magnets will not secure the control box in the presence of large inertial forces. If you plan on making any form of attacking robot, you must ensure that the control box will not come loose. Magnets will not be sufficient for this purpose!</li>
+<li>The AMP connectors must be protected against impact.</li>
+<li>The cooling vents on the control box must be unobstructed.</li>
+</ol>
+<p><strong>Note</strong>: When using the control box in the lab, do not leave it on the table or you may lose the right to use it. Return it to the magnet on top of the podium.</p>
+<h3 class="subsubhead">Suggested Mounting Hardware</h3>
+<p><img src="../../../contents/projects/box_on_mount.jpg" alt="Suggested mounting hardware."></p>
+<p class="instruction">Suggested mounting hardware.</p>
+<p><br><br> </p>
+<p><img src="../../../contents/projects/mount.jpg" alt="Suggested mounting hardware."></p>
+<p class="instruction">Suggested mounting hardware.</p>
+<h3 class="subsubhead">Process Plans to Create the Mount</h3>
+<ul>
+<li>Shear two piecies of the 1/8" thick adhesively backed magnet. The larger piece is 1.5" by 4." The smaller piece is 1.5" by 2."</li>
+<li>Shear out a piece of sheet metal according to this drawing. (<img alt="This resource may not render correctly in a screen reader." src="../../../common/images/inacessible.gif"><a href="../../../contents/projects/MIT2_007s09_metal_bracket.pdf">PDF</a>)</li>
+<li>Bend the sheet metal. Make sure you bend the metal in the correct direction (see picture).</li>
+<li>Use the adhesive on the back of the magnets to assemble the mount according to this drawing. (<img alt="This resource may not render correctly in a screen reader." src="../../../common/images/inacessible.gif"><a href="../../../contents/projects/MIT2_007s09_controlbox_mount.pdf">PDF</a>)</li>
+<li>If you are creating an attacking robot, you may need to add a velcro strap or an additional feature to prevent control box detachment.</li>
+</ul>
+<p>This is by no means the only way to mount the control box. It is just a way. We do not guarantee the mount. You will have to make sure it is suitable for your particular machine. It is also likely the mount will need to be modified to better suit your machine. Please feel free to do so and try to integrate it with another sheet metal structure. To attach the mount to your machine, we recommend double sided tape or screws. When using screws, make sure they do not interfere with the mating of the control box and the magnets.</p>
+<p>Wires, rubber bands, and string are <strong>not</strong> sufficient mounting solutions for the control box. Rubber bands, string, and velcro may be used in conjunction with the above design, but <strong>not</strong> independently.</p>
+<p><strong>If the control box comes loose during the contest, your machine will be immediately disqualified.</strong></p>
+<p><strong>No questions asked and no second chances!</strong></p>
+<h2 class="subhead">
+<a name="How_to_Run_the_Control_system" id="How_to_Run_the_Control_system"></a>How to Run the Control system</h2>
+<p><img border="0" src="../../../contents/projects/control_podium.jpg" alt="Blue podium."></p>
+<p class="instruction">Blue podium.</p>
+<ol>
+<li>Get a control box. Match the color on the control box to the color on the front of the podium.</li>
+<li>Connect power to the control box through the AMP 4-pin connecter, either using the power supply in the podium or your batteries. To connect to the podium power supply, simply connect the tether cable on the front of the podium to the box. Be sure to check that your machine runs with batteries too. <p><img border="0" src="../../../contents/projects/controlpodmpower.jpg" alt="Connecting power."></p>
+<p class="instruction">Connecting power.</p>
+</li>
+<li>Make sure power on the control box is off. The control box is off if both the red and green buttons are not lit.</li>
+<li>Connect the motor signal cable to the control box using the AMP 14-pin connector.</li>
+<li>Turn on the control box by pressing in the red button. Do not press the green button.</li>
+<li>Check the status of the indicator LEDs to make sure your batteries is sufficiently charged and the system is calibrated. <p class="caption"><img border="0" src="../../../contents/projects/controlpdmcotrls.jpg" alt=""></p>
+<p class="instruction">Drive your machine.</p>
+</li>
+<li>Drive your machine! Each joystick on the podium will supply a maximum positive voltage when it is pushed forwards (towards the low marking on the joystick) and will supply a maximum negative voltage when it is pulled backwards (towards the high marking on the joystick). Supply voltage out of the control box will be a scaled value of the output voltage from the battery. Nominally, this value should be around 9V, which corresponds to the torque-speed data recorded for the Tamiya motors. How your machine responds to positive or negative voltage depends on how you have wired your AMP 14-pin motor connector. Be sure to test your machine before impound day so you can adjust the wiring for the easiest possible operation. You will not be allowed to change this afterward. <p>The high and low markings, the buttons on the joysticks, and the pneumatic pedals are all non-functional or inactive for this contest.</p>
+</li>
+<li>Practice a lot! Remember, driving 2.007 machines is difficult. Plenty of time should be allocated for practice.</li>
+</ol>
+<p><strong>Do not leave the control box on the table when you are done or you may lose the right to use it. Return it to the magnet on top of the podium.</strong></p>
+<p><strong>Also, do not remove the control box from the area surrounding the table.</strong></p>
+<p>Important Note: The control system is designed to run your machines for no more than a couple of minutes. Running your motors for a long period of time will cause things to get very hot. If you see the amber "thermal warning" light go on, you should keep the power plugged and let your box cool for 1 minute. If this happens to you frequently, you might also be slowly frying your motors.</p>
+	                    
+    
+    
+    
+
+
+	        			
+	                    
+	                    
+	                    
+	                    
+
+            		 </main><!--Course_inner_section tag close -->
+           		     <div class="clear"></div>
+ 				 </div>
+<!--Course_wrapper tag close -->
+ 			 </div>
+<!--left tag close -->
+ 			
+         </div>
+<!--grid tag close -->
+      </div>
+		
+		<footer id="bottom">
+			<div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer"><div id="footer">
+<nav aria-label="Footer">     <nav id="foot-c1" class="grid_2 alpha" aria-labelledby="f-find-courses">       <span class="footer" id="f-find-courses" aria-hidden="true">Find Courses</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw.mit.edu/courses/find-by-topic/">Find by Topic</a></li>
+    <li><a href="https://ocw.mit.edu/courses/find-by-number/">Find by Course Number</a></li>
+    <li><a href="https://ocw.mit.edu/courses/find-by-department/">Find by Department</a></li>
+    <li><a href="https://ocw.mit.edu/courses/new-courses/">New Courses</a></li>
+    <li><a href="https://ocw.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+    <li><a href="https://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+    <li><a href="https://ocw.mit.edu/courses/audio-video-courses/">Audio/Video Courses</a></li>
+    <li><a href="https://ocw.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+    <li><a href="https://ocw.mit.edu/courses/instructor-insights/">Instructor Insights</a></li>
+    <li><a href="https://ocw.mit.edu/resources/">Supplemental Resources</a></li>
+    <li><a href="https://ocw.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>
+    <li><a href="https://ocw.mit.edu/courses/mit-open-learning-library/">MIT Open Learning Library</a></li>
+    <li><a href="https://ocw.mit.edu/courses/translated-courses/">Translated Courses</a></li>
+</ul>
+</nav>
+<div id="foot-c2" class="grid_2"><nav aria-labelledby="f-for-educators">         <span id="f-for-educators" class="footer" aria-hidden="true">For Educators</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://chalk-radio.simplecast.com/">Chalk Radio Podcast</a></li>
+    <li><a href="https://ocw.mit.edu/educator/">OCW Educator Portal </a></li>
+    <li><a href="https://ocw.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>
+    <li><a href="https://openlearning.mit.edu/campus/digital-innovations/" aria-label="External Link: Residential Digital Innovations">Residential Digital Innovations </a></li>
+    <li><a href="https://ocw.mit.edu/high-school/">OCW Highlights for High School</a></li>
+    <li><a href="https://ocw.mit.edu/educator/additional-resources/">Additional Resources</a></li>
+</ul>
+</nav></div>
+<nav class="grid_2" id="foot-c3" aria-labelledby="f-donate">       <span id="f-donate" class="footer" aria-hidden="true">Give Now</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw.mit.edu/give/">Make a Donation</a></li>
+    <li><a href="https://ocw.mit.edu/give/why-give/">Why Give?</a></li>
+    <li><a href="https://ocw.mit.edu/give/our-supporters/">Our Supporters</a></li>
+    <li><a href="https://ocw.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+    <li><a href="https://ocw.mit.edu/support/">Become a Corporate Sponsor</a></li>
+</ul>
+</nav>
+<div class="grid_2" id="foot-c4">
+<nav aria-labelledby="f-about">         <span id="f-about" class="footer" aria-hidden="true">About</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw.mit.edu/about/">About OpenCourseWare</a></li>
+    <li><a href="https://ocw.mit.edu/about/site-statistics/">Site Statistics</a></li>
+    <li><a href="https://ocw.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+    <li><a href="https://ocw.mit.edu/about/newsletter/">Newsletter</a></li>
+    <li><a href="https://www.ocw-openmatters.org/">Open Matters Blog</a></li>
+</ul>
+</nav><!--about-->       <nav aria-labelledby="f-tools">         <span id="f-tools" class="footer" aria-hidden="true">Tools</span>
+<ul class="foot-bullet" role="presentation">
+    <li><a href="https://ocw.mit.edu/help/">Help &amp; FAQs</a></li>
+    <li><a href="https://ocw.mit.edu/about/contactus">Contact Us</a></li>
+    <li><a href="https://ocw.mit.edu/help/site-map/">Site Map</a></li>
+    <li><a href="../../../common/terms/index.htm">Privacy &amp; Terms of Use</a></li>
+    <li><a href="https://ocw.mit.edu/help/rss/">RSS Feeds</a></li>
+</ul>
+</nav><!--tools-->
+</div>
+</nav> <aside style="min-height: 289px;" aria-labelledby="f-our-corporate-supporters" class="grid_4 omega" id="foot-c5">           <span aria-hidden="true" class="footer" id="f-our-corporate-supporters">Our Corporate Supporters</span>           <!-- HOME_CORP_LOGO_1 -->
+<div id="div-gpt-ad-1388181177156-0" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_2 -->
+<div id="div-gpt-ad-1388181177156-1" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_3 -->
+<div id="div-gpt-ad-1388181177156-2" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_4 -->
+<div id="div-gpt-ad-1388181177156-3" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+            </script></div>
+<!-- HOME_CORP_LOGO_5 -->
+<div id="div-gpt-ad-1388181177156-4" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+              </script></div>
+<!-- HOME_CORP_LOGO_6 -->
+<div id="div-gpt-ad-1388181177156-5" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+              </script></div>
+</aside>
+<div class="grid_12 alpha omega" itemprop="publisher" itemscope="" itemtype="http://schema.org/CollegeOrUniversity">
+<h4 class="footer" style="border-top: thin solid #d5c9ba; padding-top: 10px; margin-bottom: 10px;">About <span itemprop="name">MIT OpenCourseWare</span>
+</h4>
+<p style="color: #999; font-size: 1em; line-height: 1.5em; margin-top: 10px;" itemprop="description">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,400 courses available, OCW is delivering on the promise of open sharing of knowledge. <a href="http://ocw.mit.edu/about/">Learn more »</a></p>
+</div>
+<div id="foot-copy" class="grid_12 alpha omega" style="border-top: none;">
+<a href="http://web.mit.edu"><img src="../../../common/images/logo_mit.png" alt="Massachusetts Institute of Technology logo and name." style="width: 195; height: 44;"></a><a href="https://openlearning.mit.edu/"><img src="https://ocw.mit.edu/images/mitol_logo.png" alt="MIT Open Learning logo and name." style="width: 265; height: 50; vertical-align: top; padding-left:30px;"></a><a href="https://www.oeglobal.org/"><img src="https://ocw.mit.edu/images/oeg_logo.gif" alt="Open Education Consortium logo." style="width: 219px; height: 59px; vertical-align: top; padding-left:20px;"></a><a rel="license" itemprop="useRightsUrl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="../../../common/images/cc_by-nc-sa.png" alt="Creative Commons logo with terms BY-NC-SA." style="width: 126px; height: 44px; margin-right: 0; padding-left: 20px;"></a>
+<p class="copyright">© 2001–2018<br>
+Massachusetts Institute of Technology</p>
+<p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons License</a> and other <a href="../../../common/terms/index.htm" rel="cc:morePermissions">terms of use</a>.</p>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+                
+			</div> <!-- bottom grid end -->
+		</footer><!-- footer bottom end -->
+
+
+   </body>
+ </html>
