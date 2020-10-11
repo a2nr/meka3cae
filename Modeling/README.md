@@ -52,6 +52,70 @@ Maka akan terlihat seperti gambar 11
 
 ![Gambar 11 - Objek dengan Section](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_11.jpg)
 
+##  Gambar Pemasangan
+
+Gambar isomterik dibawah adalah gambar sistem bearing pillow-block yang telah terpasang (Gambar 13). Apabila gambar tersebut diperhatikan, informasi didalam objek tersebut tidak terlihat.
+
+![Gambar 13 - Pillow Block](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_13.jpg)
+
+Di gamabar dibawah adalah gambar isometrik dari pillow-block yang dilepas atau disassembled. Dari gambar tersebut dapat diperhatikan jelas bagian dalamnya tapi tidak detail.
+
+![Gambar 14 - Pillow Block](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_14.jpg)
+
+## Gambar Cross-Sectional
+
+Gambar Vross-Sectional menggambarkan potongan dari bagian objek dan cara lain untuk menyampaikan komponen tersembunyi didalam perangkar.
+
+Dapat dibayangkan suatu objek dipotong secara vertikal dari bagian tengah dari pillow block (gambar 15). Lalu dapat dibayangkan untuk fokus dengamemghilangkan bagian lain dapat digambarkan pada gamabar 16.
+
+![Gambar 15 - Pillow Block](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_15.jpg)
+
+![Gambar 16 - Pillow Block](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_14.jpg)
+
+Gambar dibawah ini adalah bagian yang terlihat dari sisi yang terpotong. 
+
+![Gambar 17 - Sisi A](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_14.jpg)
+
+Gambar cross-sectional (gambar 17),  adalah gambar orthogonal dari arah potongan nya yang dapat mendeskripsikan nilai panjang dan diameter lebih baik.
+
+
+## Dimensioning
+
+Tujuan dari memberikan dimensi adalah memberikan informasi dari objek secara mendetail. Memberikan dimensi diharusnya mengikuti aturan aturan tertentu.
+
+Akurasi: Nilai yg tertera harus benar.
+Kebersihan: Dimensi diletakkan ke tempat yang benar
+Ketepatan: Tidak ada yang kurang atau berlebih
+Kemudahan Membaca: Menggunakan garis yang tepat
+
+## Dimana Meletakan Dimensinya?
+
+Memberikan dimensi harus diletakkan pada bagian depan yang mendeskripsikan obejek secara benar. Conthnya pada gambar 25
+
+![Gambar 25 - Contoh Peletakaan yang benar dan salah](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_25.jpg)
+
+Untuk lebih mudah dalam menjelaskan tentang pemberian dimensi, perhatikan dari objek balok.  Dengan objek tersebut membutuhkan tiga dimensi untuk mendeskripsikan secara jelas dari objek nya (Gambar 26). 
+
+![Gambar 26 - Dimensi balok](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_26.jpg)
+
+Apabila kotak tersebut dipotong disuatu bagian seperti gambar 27, maka banyak pilihan dimensi yang harus ditampilkan. Kebanyakan pengukuran  dimensi dilakukan pada garis atau sisi yang umum. Dimensi umum tersebut dinamai *datum line or surface*. *Datum line* mengurangi pengukuran tambahan atau tidak akurasi pembuatan objek. Dapat diperhatikan bagaimana dimensi yang memeiliki refrensi ke *datum surface*. Dapat diperhatikan *datum surface* pada gambar 27, dan yang lain pada gamabar 28.
+
+![Gambar 27 - Datum surface original](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_27.jpg)
+![Gambar 28 - Datum surface refrence](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_28.jpg)
+
+Pada gambar 29 diberikan lubang yang peletakan dimensinya dibagian kiri objek. Simbol Ø adalah simbol untuk diameter.
+
+![Gambar 29 - Pemberian Lubang](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_29.jpg)
+
+Ketika bagian kiri dari balok tersebut diberikan lengkung berdiameter seperti gambar 30, maka muncul duplikasi penempatan dimensi pada nilai lebar. Lebar balok telah diketahui karena nilainya sama karena nilai lebar sudah termasuk jari jari lengkungan. Lalu dengan memberikan (REF) untuk mengklarifikasi bahwa dimensi tidak begitu dibutuhkan.
+
+![Gambar 30 - Pemberian Lubang](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_30.jpg)
+
+Disuatu tempat didalam lembar gambar harus diberikan informasi satuan yang digunakan dalam menggambar dan sekala yang digunakan.
+
+Gambar tersebut bersifat simetris secara horizontal. Garis putus putus dibagian tengah digunakan untuk menandakan objek tersebut simetris termasuk lengkungan dan lubangnya. (Gambar 31). 
+
+![Gambar 31 - Pemberian Lubang](../assets/images/Modeling/2-007-spring-2009/2-007-spring-2009/contents/related-resources/fig_31.jpg)
 
 Berikut adalah daftar pembahasan pada Bab Modeling
 {% include list.liquid all=true %}
